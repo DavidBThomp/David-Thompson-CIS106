@@ -1,0 +1,19 @@
+... How to make a fried sunny side up egg
+
+Function main
+	Turn on oven eye high heat
+		Light flame for on oven eye
+		place skillet centrally over eye that is on
+	Open Fridge
+		remove egg from carton
+		remove butter from container
+	Close Fridge
+	put butter in skillet
+		Heat butter until melted
+		Spread butter around skillet
+	crack egg on flat surface
+		Place unbroken egg yolk and egg white in skillet
+		Leave egg for 1 minute 30 seconds
+	Remove egg from skillet onto plate without breaking yolk
+	Turn off oven eye
+End
