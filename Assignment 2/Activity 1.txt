@@ -1,2 +1,3 @@
 Function Main
+    Output "Hello Brendan!"
 End
