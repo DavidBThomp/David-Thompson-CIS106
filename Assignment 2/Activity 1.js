@@ -1,3 +1,1 @@
-function main() {
-    window.alert("Hello Brendan!");
-}
+console.log("Hello world!");
