@@ -11,7 +11,7 @@
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <comment text="Take a dogs name and age and convert into dog years (1 human year = 7 dog years)"/>
+            <comment text="Take a dogs name and age and converts it into dog years (1 human year = 7 dog years)."/>
             <declare name="dogName" type="String" array="False" size=""/>
             <declare name="dogAge" type="Integer" array="False" size=""/>
             <declare name="dogHumanAge" type="Integer" array="False" size=""/>
