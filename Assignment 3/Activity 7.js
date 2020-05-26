@@ -1,4 +1,4 @@
-    // Take a dogs name and age and convert into dog years (1 human year = 7 dog years)
+    // Take a dogs name and age and converts into dog years (1 human year = 7 dog years)
     console.log("Let's see how old your dog is...")
     
     var dogName = prompt("Enter Dog's Name");
