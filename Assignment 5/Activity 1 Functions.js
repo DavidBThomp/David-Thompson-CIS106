@@ -37,7 +37,7 @@ function getMonth(week){
 }
 
 function getYear(month){
-    var getYear = month * 12;
+    var getYear = month * 13;
     return getYear;
 }
 
