@@ -7,25 +7,27 @@ function main(){
     var pay;
     pay = getPay();
     var week;
-    week = getWeek();
+    week = getWeek(hours, pay);
     var month;
-    month = getMonth()
+    month = getMonth(week)
     var year;
-    year = getYear();
+    year = getYear(month);
     var results;
-    results = getResults();
+    results = getResults(week, month, year);
 }
 
 function getHours(){
-    var hours = prompt("Average hours per week");
+    var getHours = prompt("Average hours per week");
+    return getHours
 }
 
 function getPay(){
-    var pay = prompt ("Rate of pay per hour");
+    var getPay = prompt ("Rate of pay per hour");
+    return getPay
 }
 
-function getWeek(hour,pay){
-    var getWeek = hour * pay;
+function getWeek(hours,pay){
+    var getWeek = hours * pay;
     return getWeek;
 }
 
@@ -39,7 +41,7 @@ function getYear(month){
     return getYear;
 }
 
-function getResults(week,month,year){
+function getResults(week, month, year){
     console.log("Weekly pay: " + week);
     console.log("Monthly pay: " + month);
     console.log("Annual pay: " + year)
