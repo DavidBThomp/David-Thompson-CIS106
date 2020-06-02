@@ -6,17 +6,18 @@ function main(){
   var mile;
   mile = getMile();
   var yard;
-  yard = getYard();
+  yard = getYard(mile);
   var foot;
-  foot = getFeet();
+  foot = getFeet(yard);
   var inches;
-  inches = getInches();
+  inches = getInches(foot);
   var results
-  results = getResults();
+  results = getResults(yard,foot,inches);
 }
 
 function getMile(){
-    var mile = prompt("Input distance in miles", "20");
+    var getMile = prompt("Input distance in miles", "20");
+    return getMile
 }
 
 function getYard(mile){
