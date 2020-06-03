@@ -18,4 +18,8 @@ Assignment 4 functioned more as an extension of what I had to learn on assignmen
 
 ## Assignment 5
 
-This assignment was especially difficult for me, even though it isn't completed on the first day. The JavaScript as I can tell is barely not working, but the flowgorithm does. I got help from Hasfsa Hussaini and will likely need help again on day 2. I don't think I'm making a connection on how parameters, functions, and variables interact with each other. I feel like I slightly understand the concepts but don't know how to place what where. (Cont on day 2)
+This assignment was especially difficult for me, even though it isn't completed on the first day. The JavaScript as I can tell is barely not working, but the flowgorithm does. I got help from Hasfsa Hussaini and will likely need help again on day 2. I don't think I'm making a connection on how parameters, functions, and variables interact with each other. I feel like I slightly understand the concepts but don't know how to place what where. After getting my parameters correct I have a much stronger grasp on functions. 
+
+## Assignment 6
+
+Once again it took me a bit longer to figure this out simply because I missed out on one parameter. I did learn that when storing values from calculations they must always be stored in a variable, while outputs can simply be printed because it won't have changing values. I did peer a little bit into arrays and how to get multiple variables back from one function, but didn't use it because that seems to be a bit more advanced and will be explained in later lessons. 
