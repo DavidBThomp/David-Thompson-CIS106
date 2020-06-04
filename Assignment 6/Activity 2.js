@@ -1,54 +1,46 @@
 //Approximatley convert age into days, hours, and seconds
+
 main();
 
 function main(){
-    var age;
-    age = getAge();
-    var seconds
-    seconds = getSeconds(age);
-    var hours;
-    hours = getHours(age);
-    var days;
-    days =  getDays(age);
-    var months;
-    months = getMonths(age);
-    var results;
-    results = getResults(seconds, hours, days, months);
+    let age = getAge();
+
+    let seconds = getSeconds(age);
+    let hours = getHours(age);
+    let days =  getDays(age);
+    let months = getMonths(age);
+
+    displayResults(seconds, hours, days, months);
 }
 
 function getAge(){
-    var getAge = prompt("Input age in years: ");
-    return getAge;
+    let age = prompt("Input age in years: ");
+    return age;
 }
 
 function getSeconds(age){
-    var getSeconds;
-    getSeconds = age * 31536000; 
-    return getSeconds
+    let seconds = age * 31536000; 
+    return seconds;
 }
     
 function getHours(age){
-    var getHours;
-    getHours = age * 8760;
-    return getHours
+    let hours = age * 8760;
+    return hours;
 }
     
 function getDays(age){
-    var getDays;
-    getDays = age * 365;
-    return getDays
+    let days = age * 365;
+    return days;
 }
 
 function getMonths(age){
-    var getMonths;
-    getMonths = age * 12;
-    return getMonths
+    let months = age * 12;
+    return months;
 }
 
-function getResults(seconds, hours, days, months){
+function displayResults(seconds, hours, days, months){
     console.log("age in seconds: ",seconds);
     console.log("age in hours: ", hours);
     console.log("age in days: ", days);
     console.log("age in months: ", months);
-    return getResults
 }
