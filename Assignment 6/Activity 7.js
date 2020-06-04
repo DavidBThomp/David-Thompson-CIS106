@@ -2,34 +2,29 @@
 main();
 
 function main(){
-    var name;
-    name = dogName();
-    var age;
-    age = dogAge();
-    var humanAge;
-    humanAge = dogHumanAge(age);
-    resultDisplay(name,humanAge);
+    let name = getName();
+    let age = getAge();
+    
+    let humanAge = getHumanAge(age);
+    
+    displayResults(name,humanAge);
 }
     
-function dogName(){
-    var dogName;
-    dogName = prompt("Enter Dog's Name", "Max");
-    return dogName;
+function getName(){
+    let name = prompt("Enter Dog's Name", "Max");
+    return name;
 }
     
-function dogAge(){
-    var dogAge;
-    dogAge = prompt("Enter Dog's Age", "4");
-    console.log(dogAge)
-    return dogAge;
+function getAge(){
+    let age = prompt("Enter Dog's Age", "4");
+    return age;
 }
     
-function dogHumanAge(dogAge){
-    var dogHumanAge;
-    dogHumanAge = dogAge * 7;
-    return dogHumanAge;
+function getHumanAge(age){
+    let humanAge = age * 7;
+    return humanAge;
 }
 
-function resultDisplay(name,humanAge){
+function displayResults(name,humanAge){
     console.log(name + " is " + humanAge + " in human years!");
 }
