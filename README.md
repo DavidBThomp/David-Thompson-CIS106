@@ -23,3 +23,7 @@ This assignment was especially difficult for me, even though it isn't completed 
 ## Assignment 6
 
 Once again it took me a bit longer to figure this out simply because I missed out on one parameter. I did learn that when storing values from calculations they must always be stored in a variable, while outputs can simply be printed because it won't have changing values. I did peer a little bit into arrays and how to get multiple variables back from one function, but didn't use it because that seems to be a bit more advanced and will be explained in later lessons. 
+
+## Assignment 7
+
+The concepts for assignment 7 aren't super complex to me, the idea of logic and "if-then" statements make sense. I think I'm having a bit of trouble understanding where to use these though. I learned that when making a program using these concepts can allow for much more complex programs to be made that are much more responsive. Instead of linear programs that are simple to break, we can now make programs that can respond to different inputs and give different outputs. I also learned how much more efficient doing this can be, essentially making some of the code used and some of not, will reduce the resources used by said program.
