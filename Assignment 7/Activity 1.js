@@ -12,31 +12,17 @@ function main(){
 }
 
 function getInstructions(){
-  console.log("This program will calculate your payrate, including over time based on average weekly hours and pay.")
+  console.log("This program will calculate your payrate, including over time based on average weekly hours and pay.");
 }
 
 function getHours(){
-    let hours = prompt("Average hours per week");
-    if (hours > 0) {
-      return hours;
-    } 
-    else {
-      hours = delete hours;
-      console.log("Please insert a value greater than 0");
-      getHours();
-    }
-    console.log(hours)
+    hours = prompt("Average hours per week", "20");
+    return hours;
 }
 
 function getPay(){
-    let pay = prompt ("Rate of pay per hour");
-    if (pay > 0) {
-      return pay
-    }
-    else {
-      console.log("Please instert a value greater than 0")
-      getPay()
-    }
+    pay = prompt("Rate of pay per hour", "20");
+    return pay;
 }
 
 function getWeek(hours,pay){
