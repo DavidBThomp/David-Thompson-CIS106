@@ -27,7 +27,7 @@ function getPay(){
 
 function getWeek(hours,pay){
   if (hours > 40){
-    week = (pay * hours) +((hours - 40) * (pay * 1.5));
+    week = (pay * hours) +((hours - 40) * (pay * 0.5));
     return week;
    }
    else{
