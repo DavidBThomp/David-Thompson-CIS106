@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="david"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2020-06-08 02:46:44 PM"/>
+        <attribute name="saved" value="2020-06-09 12:05:55 PM"/>
         <attribute name="created" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMDE7MDE6NTk6MjkgUE07MjkxNA=="/>
-        <attribute name="edited" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMDg7MDI6NDY6NDQgUE07MTU7MzA3Ng=="/>
+        <attribute name="edited" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMDk7MTI6MDU6NTUgUE07MTY7MzA3Ng=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -74,7 +74,7 @@
             <declare name="week" type="Integer" array="False" size=""/>
             <if expression="hours&gt;40">
                 <then>
-                    <assign variable="week" expression="(pay * hours) +((hours - 40) * (pay * 1.5))"/>
+                    <assign variable="week" expression="(pay * hours) +((hours - 40) * (pay * 0.5))"/>
                 </then>
                 <else>
                     <assign variable="week" expression="pay * hours"/>
