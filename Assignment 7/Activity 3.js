@@ -49,13 +49,11 @@ function getCentimeters(meters){
 }
 
 function pickUnit(yard,foot,inches,kilometer,meter,centimeters){
-    choice = prompt("Would you like that distance in US or metric units?.")
+    choice = prompt("Would you like that distance in US or metric units?")
     switch(choice){
         case ('US'):
         case ('us'):
-            console.log("That is " + yard + " yards.")
-            console.log("That is " + foot + " feet.")
-            console.log("That is " + inches + " inches.")
+            console.log("That is " + yard + " yards, " + foot + " feet, and " + inches + " inches.")
             break;
         case ('metric'):
         case ('Metric'):
