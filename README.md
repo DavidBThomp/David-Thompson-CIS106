@@ -27,3 +27,8 @@ Once again it took me a bit longer to figure this out simply because I missed ou
 ## Assignment 7
 
 The concepts for assignment 7 aren't super complex to me, the idea of logic and "if-then" statements make sense. I think I'm having a bit of trouble understanding where to use these though. I learned that when making a program using these concepts can allow for much more complex programs to be made that are much more responsive. Instead of linear programs that are simple to break, we can now make programs that can respond to different inputs and give different outputs. I also learned how much more efficient doing this can be, essentially making some of the code used and some of not, will reduce the resources used by said program.
+
+
+## Assignment 8
+
+I learned that when programming using while loops are super useful tools. They can automate tasks such as gathering data from a user to creating data based on what a user inputs. I learned about changing what the variables mean in the loop in order to make to loop operational. We also used more boolean than before to define when the loop would continue or stop. This can be applied to create programs that run on a daily basis or even an hourly basis to automate the tasks that need to be done. The activity 2 JavaScript isn't completely functioning yet, I just can't get the total value of all the inputs.
