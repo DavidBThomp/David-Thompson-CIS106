@@ -3,10 +3,15 @@
 main();   
 
 function main() {
+    instructions();
     let amount = getAmount();
     let count = 0;
     let total = 0;
     runLoop(total, count, amount);
+}
+
+function instructions() {
+    console.log("This program will average out a set of numbers.")
 }
 
 function getAmount() {
