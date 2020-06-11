@@ -1,5 +1,5 @@
  // Asks user for value and number of expressions to display.
- 
+
  main();
     
 function main (){
@@ -10,7 +10,7 @@ function main (){
 }
 
 function instructions() {
-    console.log("Please input a value, then input a number for expressions. Ex: value 3, expressions 4... (3*1, 3*2, 3from*3, 3*4).");
+    console.log("Please input a value, then input a number for expressions.");
 }
 
 function getValue() {
