@@ -5,9 +5,8 @@ main();
 function main() {
     instructions();
     let amount = getAmount();
-    let count = 0;
-    let total = 0;
-    runLoop(total, count, amount);
+    let average = getAverage(amount);
+    displayAverage(average);
 }
 
 function instructions() {
@@ -19,15 +18,20 @@ function getAmount() {
     return amount;
 }
 
+function getAverage(amount) {
+    let total = 0;
+    let count = 0;
 
-function runLoop(total, count, amount) {
-    loop = 0;
     console.log("Please enter scores.");
     while (count < amount) {
         scores = prompt("");
         count = count + 1;
-        total = Number(total) + Number(scores);
+        total += Number(scores);
     }
-    console.log("The average is " + total/amount + ".");
-    return loop;
+
+    return total / amount;
+}
+
+function displayAverage(average) {
+    console.log("The average is " + average + ".");
 }
