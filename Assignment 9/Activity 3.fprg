@@ -4,13 +4,14 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="david"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2020-06-15 02:20:45 PM"/>
+        <attribute name="saved" value="2020-06-15 02:32:01 PM"/>
         <attribute name="created" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMDE7MDM6MTM6NTggUE07MjkwOA=="/>
-        <attribute name="edited" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMTU7MDI6MjA6NDUgUE07MjY7MzA2OQ=="/>
+        <attribute name="edited" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMTU7MDI6MzI6MDEgUE07Mjg7MzA2Ng=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
+            <comment text="Converts miles into metric or US units depending on type requested. Then requests if user wants to enter other distances."/>
             <declare name="repeat" type="String" array="False" size=""/>
             <do expression="repeat = &quot;Y&quot;">
                 <declare name="miles" type="Integer" array="False" size=""/>
