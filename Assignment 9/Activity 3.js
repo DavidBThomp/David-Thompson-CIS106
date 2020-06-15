@@ -1,4 +1,4 @@
-//Converts miles to yards, feet, and inches.
+//Converts miles into metric or US units depending on type requested. Then requests if user wants to enter other distances.
 
 main();
 
