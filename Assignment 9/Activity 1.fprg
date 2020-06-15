@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="david"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-06-15 03:35:34 PM"/>
+        <attribute name="created" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMTU7MDI6NDU6MDkgUE07MjkxMw=="/>
+        <attribute name="edited" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMTU7MDM6MzU6MzQgUE07OTszMDI3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Calculates average of grade scores."/>
+            <call expression="instructions"/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <declare name="total" type="Integer" array="False" size=""/>
+            <assign variable="total" expression="0"/>
+            <declare name="scores" type="Integer" array="False" size=""/>
+            <do expression="scores &gt;= 0">
+                <input variable="scores"/>
+                <if expression="scores &gt;= 0">
+                    <then>
+                        <assign variable="total" expression="total + scores"/>
+                        <assign variable="count" expression="count + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </do>
+            <output expression="&quot;The average is &quot; &amp;total/count&amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="instructions" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Please input scores, when done input any negative number to calculate average.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
