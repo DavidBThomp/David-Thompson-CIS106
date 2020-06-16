@@ -22,6 +22,6 @@ function getGrade() {
             total = Number(total) + Number(scores);
             count = count + 1;
         }
-    } while (scores > 0);
+    } while (scores > -1);
     console.log("The average is " + total/count + ".");
 }
