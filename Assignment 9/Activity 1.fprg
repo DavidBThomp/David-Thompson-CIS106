@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="david"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2020-06-15 03:35:34 PM"/>
+        <attribute name="saved" value="2020-06-16 11:24:38 AM"/>
         <attribute name="created" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMTU7MDI6NDU6MDkgUE07MjkxMw=="/>
-        <attribute name="edited" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMTU7MDM6MzU6MzQgUE07OTszMDI3"/>
+        <attribute name="edited" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMTY7MTE6MjQ6MzggQU07MTc7MzA2MQ=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -19,7 +19,7 @@
             <assign variable="total" expression="0"/>
             <declare name="scores" type="Integer" array="False" size=""/>
             <do expression="scores &gt;= 0">
-                <input variable="scores"/>
+                <assign variable="scores" expression="getScores()"/>
                 <if expression="scores &gt;= 0">
                     <then>
                         <assign variable="total" expression="total + scores"/>
@@ -28,7 +28,24 @@
                     <else/>
                 </if>
             </do>
+            <call expression="displayOutput(total,count)"/>
+        </body>
+    </function>
+    <function name="displayOutput" type="None" variable="output">
+        <parameters>
+            <parameter name="total" type="Integer" array="False"/>
+            <parameter name="count" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="output" type="String" array="False" size=""/>
             <output expression="&quot;The average is &quot; &amp;total/count&amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="getScores" type="Integer" variable="scores">
+        <parameters/>
+        <body>
+            <declare name="scores" type="Integer" array="False" size=""/>
+            <input variable="scores"/>
         </body>
     </function>
     <function name="instructions" type="None" variable="">
