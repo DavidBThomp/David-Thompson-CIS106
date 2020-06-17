@@ -36,3 +36,7 @@ I learned that when programming using while loops are super useful tools. They c
 ## Assignment 9
 
 This assignment was extremely valuable at showing me the value of how a do loop can make code much simpler to repeat. It felt very bulky at first, in the sense that it pretty much wrapped all my code to make the operations repeat. But after using it in activity 1 it felt much more reasonable. Rather than having to keep track of when a user reaches a certain boolean value, we can now have the user enter a value that validates a boolean equation. This is useful because instead of users having to know the number of values to enter, they are free to enter as many as they'd like. The most useful thing I got from this is that repeating the whole string of code makes the program much more usable. Rather than having to restart the execution of the code, you can simply loop them back to the start.. 
+
+## Assignment 10
+
+In this assignment, it felt more like applying what we learned about all the loops to have them work together. It was a bit more simple than learning about the loops themselves. It also displayed how certain loops can make certain tasks simpler. For loops are the better option when doing a count of any type, while do loops are better at taking user inputs for know if to repeat. Nesting loops inside each other allow for everything that we learned about loops to be done all together. Each one of the assignments showed progressively how loops allow more and more freedom to the programmer and user.
