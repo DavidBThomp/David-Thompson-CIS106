@@ -40,3 +40,7 @@ This assignment was extremely valuable at showing me the value of how a do loop 
 ## Assignment 10
 
 In this assignment, it felt more like applying what we learned about all the loops to have them work together. It was a bit more simple than learning about the loops themselves. It also displayed how certain loops can make certain tasks simpler. For loops are the better option when doing a count of any type, while do loops are better at taking user inputs for know if to repeat. Nesting loops inside each other allow for everything that we learned about loops to be done all together. Each one of the assignments showed progressively how loops allow more and more freedom to the programmer and user.
+
+## Assignment 11
+
+This was a real challenge that I couldn't get done in one day. Creating static data for a fixed array wasn't super complex, but getting to it seems to be the problem I am running into for Activity 1 Defined Value Arrays. For the next assignment, I am running into trouble reading the values of the array as a constant it seems. I can't pinpoint the exact problem but when I try to read the math.min and math.max of the array I am getting no values. Besides all this, arrays seems useful in storing multiple variables of data. They can simplify large inputs of data into one consolidated area. This is also useful for looking at data trends for research and as an alternative to creating lists. 
