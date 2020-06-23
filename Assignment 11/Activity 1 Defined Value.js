@@ -35,7 +35,6 @@ function calcLeapYear(year) {
     }
 }
 
-
 function getMonth() {
     var month = prompt("Input number of month to see days that for " + 
         "previously input year.");
@@ -50,7 +49,6 @@ function yearMonths(month) {
         "30", "30", "31", "30"]
     console.log(months[month] + " has " + daysYear[month] + " days.")
 }
-
 
 function leapYearMonths(month){
     var months = ["0 is not a month and", "January" , "Febuary", "March",
