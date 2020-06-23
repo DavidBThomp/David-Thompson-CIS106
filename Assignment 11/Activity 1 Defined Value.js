@@ -2,14 +2,14 @@
 // month number and will display amount of days in that month. 
 // Will continue entering numbers until user inputs number >1 and <12.
 
+
 main();
 
 function main() {
-    instuctions();
-        let year = getYear();
-        calcLeapYear(year);
+    let year = getYear();
+    if( calcLeapYear(year) ) {
         do {
-            var month
+            var month;
             month = getMonth();
             leapYearMonths(month);
     }while (month >= 1 && month <= 12)
@@ -28,10 +28,13 @@ function getYear() {
 function calcLeapYear(year) {
     if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
         console.log("This is a leap year.");
+        return true;
     } else {
         console.log("This is not a leap year.");
+        return false;
     }
 }
+
 
 function getMonth() {
     var month = prompt("Input number of month to see days that for " + 
@@ -47,6 +50,7 @@ function yearMonths(month) {
         "30", "30", "31", "30"]
     console.log(months[month] + " has " + daysYear[month] + " days.")
 }
+
 
 function leapYearMonths(month){
     var months = ["0 is not a month and", "January" , "Febuary", "March",
