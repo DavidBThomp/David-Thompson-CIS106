@@ -1,4 +1,5 @@
 //Takes grades and provides max, min,average, and numbers in decending order.
+//array.sort credited to https://www.w3schools.com/js/js_array_sort.asp
 
 main();
 
@@ -19,10 +20,10 @@ function dynamicArray() {
     let grades = [];
     var scores = 0;
     console.log("Please input grades, once a negative grade is entered the program will calulcate results.");
-    while (scores >= 0) {
+    do {
         var scores = prompt("");
         grades.push(Number(scores));
-    }
+    }while (scores >= 0);
     grades.pop();
     return grades;
 }
@@ -35,12 +36,12 @@ function displayOrder(grades) {
 
 function arrayMax(grades){
     let max = Math.max.apply(null, grades);
-    console.log("The maximum grade is " + max + ".")
+    console.log("The maximum grade is " + max + ".");
 }
 
 function arrayMin(grades){
     let min = Math.min.apply(null, grades);
-    console.log("The minimum grade is " + min + ".")
+    console.log("The minimum grade is " + min + ".");
 }
 
 function arrayAverage(order, grades){
