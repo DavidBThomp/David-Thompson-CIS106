@@ -23,12 +23,12 @@ function getAmount() {
 }
 
 function fixedArray(amount) {
-    var grades = new Array();
+    var grades = new Array(amount);
     var index = 0;
     while (index < amount) {
         var scores = prompt("");
+        grades[index] = scores;
         index++;
-        grades.splice(index, 0, scores);
     }
     return grades;
 }
