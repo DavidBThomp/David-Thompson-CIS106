@@ -52,3 +52,7 @@ This assignment ending up serving as an extension of assignment 11 because I did
 ## Assignment 13
 
 The ability to take strings and modify them is critical to proper outputs for the user. These modifications can also make the data received much more legible and useful for the programmer. For example, if a user inputs information but in incorrect form, we can use strings to correct that so it can still be used. I also learned about the various ways that JavaScript can modify strings to correct for whitespace and capitalize. The ability to separate string input values into an array means that each word or string is much more accessible. I also learned Javascript has powerful tools such as trim() to help with whitespace management. 
+
+## Assignment 14
+
+Using arrays and strings together to try to read a file type that is externally connected to the posed a challenge in the sense that .txt files created on windows have some weird attributes to them such as a return "\r" anywhere you press enter. Getting the code to come out of the notepad without taking extra things I didn't need was difficult but made easier with split, which makes it into an array. Even harder is trying to validate the existence and name of the file. I believe I got the manipulation of the text in the file down, but I don't quite fully understand how to know what file is being given to the code. I also learned a bit about errors and how we can try something even though we know it will be an error and still give the user output. 
