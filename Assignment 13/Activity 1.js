@@ -12,20 +12,25 @@ function main() {
 
 
 function getName() {
-    name = prompt("What is your first and last name?");
-    return name;
+    name = prompt("What is your first and last name?", "");
+        if (name.length >= 1) {
+        return name;
+        } else {
+        console.log("Please input valid words for name.");
+        main();
+        }
 }
 
 function fixName(name) {
-    name.trim();
     var whitespace = name.replace (/\s+/g, ' ');
     var capitalize = (str) => str[0].toUpperCase() + str.slice(1).toLowerCase();
     var names = whitespace.split(" ").map(capitalize);
+    name.trim();
     return names;
 }
 
 function makeName(names) {
-    var first = names[0].charAt(0)
-    var last = names[names.length - 1]
-    console.log(last + " " + first + ".")
+    var first = names[0].charAt(0);
+    var last = names[names.length - 1];
+    console.log(last + " " + first + ".");
 }
