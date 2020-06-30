@@ -19,7 +19,11 @@ function getInput() {
 }
 
 function processString(input) {
-    var whitespace = input.replace(/\s+/g, '');
+    var whitespace = input.trim();
+    var arraysplit = whitespace.split(",")
+    arraysplit = arraysplit.map(Function.prototype.call, String.prototype.trim, String.prototype.replace(/\s+/g, ' ').charAt(arraysplit.length));
+    var string = arraysplit.toString()
+    var whitespace = string.replace(/\s+/g, ' ');
     var newline = whitespace.replace(/,/g, "\n");
     return newline;
 }
