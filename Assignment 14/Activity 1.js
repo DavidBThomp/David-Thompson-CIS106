@@ -8,9 +8,7 @@ function main() {
   let file = getFile();
   let array = getArray(file);
   let numbers = getNumbers(array);
-  let names = getNames(array);
-  
-  console.log(array);
+  let name = getNames(array);
 
   arrayMax(numbers);
   arrayMin(numbers);
@@ -19,30 +17,43 @@ function main() {
 
 function getFile() {
   var fs = require('fs');
-  var file = fs.readFileSync('scores.txt', 'utf8');
-  return file;
+  var filesync = fs.existsSync('scores.txt')
+  if(filesync == false){
+      console.log("Please use a file named 'scores' with the extention '.txt'.");
+      process.exit(1)
+  }else{
+      var file = fs.readFileSync('scores.txt', 'utf8'); 
+      return file;
+  }
 }
 
 function getArray(file) {
-  var fixfile = file.replace(/\r\n/g, ",");
-  var array = fixfile.split(",");
+  var fixfile = file.replace(/\r/g, "");
+  var array = fixfile.split(/\n/g);
   return array;
 }
 
+
 function getNumbers(array) {
-var numbers = []
-  for(var i = 3; i < array.length; i += 2) { 
-    numbers.push(array[i]);
+var numbers = [];
+var holder;
+  for(var i = 0; i < array.length; i += 1) { 
+    holder = array[i].split(",");
+    numbers.push(holder[1]);
 }
+console.log(numbers);
 return numbers;
 }
 
 function getNames(array) {
-  var names = []
-  for(var i = 2; i < array.length; i += 2) { 
-    names.push(array[i]);
+  var name = [];
+  var holder;
+  for(var i = 0; i < array.length; i += 1) { 
+    holder = array[i].split(",");
+    name.push(holder[0]);
 }
-return names;
+console.log(name);
+return name;
 }
 
 function arrayMax(numbers){
