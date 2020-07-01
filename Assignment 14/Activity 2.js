@@ -2,54 +2,73 @@
 //array.sort credited to https://www.w3schools.com/js/js_array_sort.asp
 //node.js credited to https://www.vincentntang.com/read-local-text-file-nodejs/
 
-
 main();
 
 function main() {
   let file = getFile();
   let array = getArray(file);
   let numbers = getNumbers(array);
-  let names = getNames(array);
-  
-  console.log(array);
+  let name = getNames(array);
 
+  displayArray(name,numbers)
   arrayMax(numbers);
   arrayMin(numbers);
   arrayAverage(numbers);
 }
 
-
 function getFile() {
-try {
   var fs = require('fs');
-  var file = fs.readFileSync('scores.txt', 'utf8'); 
-  return file;   
-} catch(err) {
-    console.log("Please use a file named 'score' with the extention .txt")
+  var filesync = fs.existsSync('scores.txt')
+  if(filesync == false){
+      console.log("Please use a file named 'scores' with the extention '.txt'.");
+      process.exit(1)
+  }else{
+      var file = fs.readFileSync('scores.txt', 'utf8'); 
+      return file;
   }
 }
 
 function getArray(file) {
-  var fixfile = file.replace(/\r\n/g, ",");
-  var array = fixfile.split(",");
-  array = array.map(Function.prototype.call, String.prototype.trim)
+  var fixfile = file.replace(/\r/g, "");
+  var array = fixfile.split(/\n/g);
   return array;
 }
 
 function getNumbers(array) {
-var numbers = []
-  for(var i = 3; i < array.length; i += 2) { 
-    numbers.push(array[i]);
-}
-return numbers;
+var numbers = [];
+var holder;
+  for(var i = 0; i < array.length; i += 1) { 
+    holder = array[i].split(",");
+    holder[1] = holder[1].trim();
+    holder[1] = Number(holder[1])
+    if (isNaN(holder[1]) == true){
+      console.log("One or more scores may contain invalid scores, which have been removed.")
+    }else {
+      numbers.push(holder[1]);
+    }
+  } 
+  return(numbers);
 }
 
 function getNames(array) {
-  var names = []
-  for(var i = 2; i < array.length; i += 2) { 
-    names.push(array[i]);
+  var name = [];
+  var holder;
+  for(var i = 0; i < array.length; i += 1) { 
+    holder = array[i].split(",");
+    holder[0] = holder[0].trim();
+    if (isNaN(holder[0]) == true){
+      name.push(holder[0])
+    }else {
+      console.log("One or more names contain invalid charcters, which have been removed.")
+    }
+  }
+return name;
 }
-return names;
+
+function displayArray(name,numbers) {
+  for(var i = 0; i < name.length; i += 1) { 
+    console.log(name[i] + ": " + numbers[i])
+  }
 }
 
 function arrayMax(numbers){
