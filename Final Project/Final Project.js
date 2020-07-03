@@ -11,21 +11,23 @@
 
 //Actual Time
 //Thursday : Request to see if page is functional, then take XML from page.
-//
+//Friday : Can not get a way to convert the XML string into readable xml for JavaScript...
 
 
 //Refrences
 //Extracting XML file: https://stackoverflow.com/questions/50025134/how-to-extract-xml-data-from-a-url-link-with-jquery-or-javascript/50025854
 //Reading Headers : https://www.w3schools.com/js/js_ajax_http.asp
+//Getting Tags from string: https://stackoverflow.com/questions/11398419/trying-to-use-the-domparser-with-node-js
 //
 
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+const jsdom = require("jsdom");
 
 main();
 
 function main() {
     let text = requestPage();
-    console.log(text);
+    getTags(text);
 }
 
 function requestPage() {
@@ -34,4 +36,12 @@ function requestPage() {
     request.open("GET", url, false);
     request.send(null);
     return request.responseText;
+}
+
+
+
+function getTags(text) {
+    const dom = new jsdom.JSDOM();
+    console.log(dom.window.document.querySelectorAll("name")[0].childNodes[0].nodeValue);
+    //Queryselectorall isn't functional? Is is incorrect use of the property or just another error?
 }
