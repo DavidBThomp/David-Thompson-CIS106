@@ -5,15 +5,19 @@
 main();
 
 function main() {
-  let file = getFile();
-  let array = getArray(file);
-  let numbers = getNumbers(array);
-  let name = getNames(array);
+    try {
+        let file = getFile();
+        let array = getArray(file);
+        let numbers = getNumbers(array);
+        let name = getNames(array);
 
-  displayArray(name,numbers)
-  arrayMax(numbers);
-  arrayMin(numbers);
-  arrayAverage(numbers);
+        displayArray(name,numbers)
+        arrayMax(numbers);
+        arrayMin(numbers);
+        arrayAverage(numbers);
+    } catch {
+        console.log("An unexpected error occurred.")
+    }
 }
 
 function getFile() {
