@@ -11,7 +11,7 @@
 
 //Actual Time
 //Thursday : Request to see if page is functional, then take XML from page.
-//Friday : Can not get a way to convert the XML string into readable xml for JavaScript...
+//Friday : 
 
 
 //Refrences
@@ -27,6 +27,9 @@ main();
 
 function main() {
     let text = requestPage();
+    console.log(text);
+    
+    
     getTags(text);
 }
 
@@ -41,7 +44,7 @@ function requestPage() {
 
 
 function getTags(text) {
-    const dom = new jsdom.JSDOM();
-    console.log(dom.window.document.querySelectorAll("name")[0].childNodes[0].nodeValue);
-    //Queryselectorall isn't functional? Is is incorrect use of the property or just another error?
+    const dom = new jsdom.JSDOM(text);
+    console.log(dom.window.document.querySelectorAll('name').textContent);
+    //Queryselectorall isn't functional? Is it incorrect use of the property or just another error?
 }
