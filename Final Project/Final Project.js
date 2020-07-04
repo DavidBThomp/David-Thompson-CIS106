@@ -1,14 +1,33 @@
+//Final Project - XML Page
+
+//Time Line
+//Thursday : Begin getting input from website X
+//Friday : Website input fully functional (validate website exists and data from site is good) X
+//Saturday : Begin Processing website data into arrays (name, description, calories, price) 
+//Sunday : Validating Website data (Caps, whitespace, integers vs strings)
+//Monday: Display Data as "name - description - calories - price"
+//Tuesday : Total values and display totals "0 items - 0 average calories - $0.00 average price"
+//Confirm project works and final submission
+
+//Actual Time
+//Thursday : Request to see if page is functional, then take XML from page.
+//Friday : Can not get a way to convert the XML string into readable xml for JavaScript...
+//Saturday : Managed to get values of data I need but have a lot of whitespace elements in array. Will remove white space tonight.
+
+
+//Refrences
+//Extracting XML file: https://stackoverflow.com/questions/50025134/how-to-extract-xml-data-from-a-url-link-with-jquery-or-javascript/50025854
+//Reading Headers : https://www.w3schools.com/js/js_ajax_http.asp
+//Getting Tags from string: https://stackoverflow.com/questions/11398419/trying-to-use-the-domparser-with-node-js
+//
+
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-const jsdom = require("jsdom");
 
 main();
 
 function main() {
     let text = requestPage();
-    console.log(text);
-    
-    
-    getTags(text);
+    let array = getTags(text);
 }
 
 function requestPage() {
@@ -19,8 +38,21 @@ function requestPage() {
     return request.responseText;
 }
 
-function getTags(text) {
-    const dom = new jsdom.JSDOM(text);
-    console.log(dom.window.document.querySelectorAll('name').textContent);
-    //Queryselectorall, but queryselector works fine? Is it incorrect use of the property or just another error?
+function getTags(text) {    
+    var fixfile = text.replace(/\r\n/g, "");
+    var array = fixfile.split('>')
+    array.splice(0, 2);
+    array.pop()
+    array.pop() 
+
+    var goodarray = []
+    var holder;
+      for(var i = 0; i < array.length; i += 1) { 
+        holder = array[i].split("<")[0];
+        goodarray.push(holder);
+      }
+
+    console.log(goodarray);
+    return goodarray;
 }
+
