@@ -1,3 +1,28 @@
+//Final Project - XML Page
+
+//Time Line
+//Thursday : Begin getting input from website X
+//Friday : Website input fully functional (validate website exists and data from site is good) X
+//Saturday : Begin Processing website data into arrays (name, description, calories, price)  X
+//Sunday : Validating Website data (Caps, whitespace, integers vs strings) 
+//Monday: Display Data as "name - description - calories - price" X
+//Tuesday : Total values and display totals "0 items - 0 average calories - $0.00 average price" X
+//Confirm project works and final submission
+
+//Actual Time
+//Thursday : Request to see if page is functional, then take XML from page.
+//Friday : Can not get a way to convert the XML string into readable xml for JavaScript...
+//Saturday : Managed to get values of data I need but have a lot of whitespace elements in array. Will remove white space tonight.
+//Sunday : Got all data into seperate arrays, and can display results needed. Only thing left is Sunday's objective of validating data.
+
+
+//Refrences
+//Extracting XML file: https://stackoverflow.com/questions/50025134/how-to-extract-xml-data-from-a-url-link-with-jquery-or-javascript/50025854
+//Reading Headers : https://www.w3schools.com/js/js_ajax_http.asp
+//Getting Tags from string: https://stackoverflow.com/questions/11398419/trying-to-use-the-domparser-with-node-js
+//.filter(string) help : https://stackoverflow.com/questions/281264/remove-empty-elements-from-an-array-in-javascript
+//
+
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 main();
@@ -76,13 +101,13 @@ function getPrice(array) {
 }
 
 function displayMenuStats(name, calorie, price) {
-  console.log("There are " + name.length + " items on the menu")
+  console.log("There are " + name.length + " items on the menu.")
   
   var totalcalories = calorie.reduce(function(a, b){return a + b}, 0 )
-  console.log("The average amount of calories per item are " + totalcalories/calorie.length)
+  console.log("The average amount of calories per item are " + totalcalories/calorie.length + ".")
 
   var totalprice = price.reduce(function(a, b){return a + b}, 0 )
-  console.log("The average price per item is $" + (totalprice/price.length).toFixed(2))
+  console.log("The average price per item is $" + (totalprice/price.length).toFixed(2) + ".")
 }
 
 function promptItem(name) {
@@ -91,7 +116,7 @@ function promptItem(name) {
     var addition = (i+1);
     console.log(addition + ") " +name [i])
     }
-    var number = prompt('\n' + "What item would you like to get the description, calories, and price for? Please use numbers to represent item.");
+    var number = prompt('\n' + "What item would you like to get the description, calories, and price for? Please use numbers to represent item");
     return number;
 }
 
