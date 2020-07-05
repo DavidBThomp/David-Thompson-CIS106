@@ -12,6 +12,7 @@ function main() {
 
     let number = promptItem(name);
     displayItem(name, description, calorie, price, number);
+    displayMenuStats(name, calorie, price);
 }
 
 function requestPage() {
@@ -87,4 +88,14 @@ function displayItem(name, description, calorie, price, number) {
     console.log("Description - " + description[number - 1]);
     console.log("Calories - " + calorie[number - 1]);
     console.log("Price - $" + price[number - 1]);    
+}
+
+function displayMenuStats(name, calorie, price) {
+    console.log("There are " + name.length + " items on the menu")
+    
+    var totalcalories = calorie.reduce(function(a, b){return a + b}, 0 )
+    console.log("The average amount of calories per item are " + totalcalories/calorie.length)
+
+    var totalprice = price.reduce(function(a, b){return a + b}, 0 )
+    console.log("The average price per item is $" + (totalprice/price.length).toFixed(2))
 }
