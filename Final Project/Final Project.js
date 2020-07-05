@@ -9,7 +9,9 @@ function main() {
     let description = getDescription(array);
     let calorie =  getCalorie(array)
     let price =  getPrice(array)
-    console.log(name, description, calorie,price)
+
+    let number = promptItem(name);
+    displayItem(name, description, calorie, price, number);
 }
 
 function requestPage() {
@@ -63,10 +65,26 @@ function getCalorie(array) {
 
 function getPrice(array) {
   var price = [];
+  var test;
   for(var i = 1; i < array.length; i += 4) { 
-    price.push(Number(array[i]));
+    test = array[i].replace("$", '');
+    price.push(Number(test));
   }
   return price;
 }
 
-//price has dollar sign, so number is NaN
+function promptItem(name) {
+    for(var i = 0; i < name.length; i += 1) { 
+    var addition = (i+1);
+    console.log(addition + ") " +name [i])
+    }
+    var number = prompt("What item would you like to get the description, calories, and price for? Please use numbers to represent item.");
+    return number;
+}
+
+function displayItem(name, description, calorie, price, number) {
+    console.log("Name - " + name[number -1]);
+    console.log("Description - " + description[number - 1]);
+    console.log("Calories - " + calorie[number - 1]);
+    console.log("Price - $" + price[number - 1]);    
+}
