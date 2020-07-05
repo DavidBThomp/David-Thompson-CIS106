@@ -27,7 +27,7 @@ main();
 
 function main() {
     let text = requestPage();
-    let array = getTags(text);
+    let array = getArray(text);
 }
 
 function requestPage() {
@@ -38,21 +38,20 @@ function requestPage() {
     return request.responseText;
 }
 
-function getTags(text) {    
-    var fixfile = text.replace(/\r\n/g, "");
-    var array = fixfile.split('>')
-    array.splice(0, 2);
-    array.pop()
-    array.pop() 
+function getArray(text) {    
+    var fixfile = text.replace(/\r\n\s+/g, "");
+    var breakText = fixfile.split('>')
+    breakText.splice(0, 2);
+    breakText.pop()
+    breakText.pop() 
 
     var goodarray = []
     var holder;
-      for(var i = 0; i < array.length; i += 1) { 
-        holder = array[i].split("<")[0];
+      for(var i = 0; i < breakText.length; i += 1) { 
+        holder = breakText[i].split("<")[0];
         goodarray.push(holder);
       }
-
-    console.log(goodarray);
-    return goodarray;
+    var array = goodarray.filter(String)
+    console.log(array);
+    return array;
 }
-
