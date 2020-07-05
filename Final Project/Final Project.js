@@ -10,9 +10,10 @@ function main() {
     let calorie =  getCalorie(array)
     let price =  getPrice(array)
 
+    displayMenuStats(name, calorie, price);
     let number = promptItem(name);
     displayItem(name, description, calorie, price, number);
-    displayMenuStats(name, calorie, price);
+
 }
 
 function requestPage() {
@@ -74,12 +75,23 @@ function getPrice(array) {
   return price;
 }
 
+function displayMenuStats(name, calorie, price) {
+  console.log("There are " + name.length + " items on the menu")
+  
+  var totalcalories = calorie.reduce(function(a, b){return a + b}, 0 )
+  console.log("The average amount of calories per item are " + totalcalories/calorie.length)
+
+  var totalprice = price.reduce(function(a, b){return a + b}, 0 )
+  console.log("The average price per item is $" + (totalprice/price.length).toFixed(2))
+}
+
 function promptItem(name) {
-    for(var i = 0; i < name.length; i += 1) { 
+    console.log('\n')
+  for(var i = 0; i < name.length; i += 1) { 
     var addition = (i+1);
     console.log(addition + ") " +name [i])
     }
-    var number = prompt("What item would you like to get the description, calories, and price for? Please use numbers to represent item.");
+    var number = prompt('\n' + "What item would you like to get the description, calories, and price for? Please use numbers to represent item.");
     return number;
 }
 
@@ -88,14 +100,13 @@ function displayItem(name, description, calorie, price, number) {
     console.log("Description - " + description[number - 1]);
     console.log("Calories - " + calorie[number - 1]);
     console.log("Price - $" + price[number - 1]);    
-}
 
-function displayMenuStats(name, calorie, price) {
-    console.log("There are " + name.length + " items on the menu")
-    
-    var totalcalories = calorie.reduce(function(a, b){return a + b}, 0 )
-    console.log("The average amount of calories per item are " + totalcalories/calorie.length)
+    //The way data is displayed on final project page
 
-    var totalprice = price.reduce(function(a, b){return a + b}, 0 )
-    console.log("The average price per item is $" + (totalprice/price.length).toFixed(2))
+    //for(var i = 0; i < name.length; i += 1) { 
+      //console.log("Name - " + name[i])
+      //console.log("Description - " + description[i])
+      //console.log("Calories - " + calorie[i])
+      //console.log("Price - $" + price[i])
+    //}
 }
