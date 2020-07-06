@@ -14,6 +14,8 @@
 //Friday : Can not get a way to convert the XML string into readable xml for JavaScript...
 //Saturday : Managed to get values of data I need but have a lot of whitespace elements in array. Will remove white space tonight.
 //Sunday : Got all data into seperate arrays, and can display results needed. Only thing left is Sunday's objective of validating data.
+//Monday : Checks if webpage is up, Catches errors, corrects for bad spelling/duplicate spaces/whitespace. Need to loop number input and make a way to exit program when done item input, also validate name, descp
+// caloire, and price all have same array amounts. 
 
 
 //Refrences
@@ -38,13 +40,20 @@ function main() {
     displayMenuStats(name, calorie, price);
     let number = promptItem(name);
     displayItem(name, description, calorie, price, number);
-
 }
+
 
 function requestPage() {
     let request = new XMLHttpRequest();
-    let url = "https://www.w3schools.com/xml/simple.xml";
+    let url = ('https://www.w3schools.com/xml/simple.xml');
     request.open("GET", url, false);
+    request.onreadystatechage = function (){
+      if (request.readystate === 4) {
+        if (request.status === 404) {
+          console.log("The webapge doesn't appear to be up or existing.")
+        }
+      }
+    }
     request.send(null);
     return request.responseText;
 }
@@ -54,12 +63,12 @@ function getArray(text) {
     var breakText = fixfile.split('>');
     breakText.splice(0, 2);
     breakText.pop();
-    breakText.pop() ;
+    breakText.pop();
 
     var goodarray = [];
     var holder;
       for(var i = 0; i < breakText.length; i += 1) { 
-        holder = breakText[i].split("<")[0];
+        holder = breakText[i].split('<')[0];
         goodarray.push(holder);
       }
     var array = goodarray.filter(String);
@@ -67,37 +76,65 @@ function getArray(text) {
 }
 
 function getName(array) {
-    var name = [];
-    for(var i = 0; i < array.length; i += 4) { 
-      name.push(String(array[i]));
+    try { 
+      var name = [];
+        for(var i = 0; i < array.length; i += 4) { 
+          array[i].trim();
+          array[i].length >= 2;
+          array[i].replace(/\s+/, " ")
+          name.push(String(array[i]));
+        }
+      return name;
+    } catch {
+      console.log("One or more of the names are invalid.");
     }
-    return name;
 }
 
 function getDescription(array) {
-  var description = [];
-  for(var i = 2; i < array.length; i += 4) { 
-    description.push(String(array[i]));
+  try {
+    var description = [];
+      for(var i = 2; i < array.length; i += 4) { 
+        array[i].trim();
+        array[i].length >= 2;
+        array[i].replace(/\s+/, " ")
+        description.push(String(array[i]));
+      }
+    return description;
+  } catch {
+    console.log("One or more of the descriptions are invalid.");
   }
-  return description;
 }
 
 function getCalorie(array) {
-  var calorie = [];
-  for(var i = 3; i < array.length; i += 4) { 
-    calorie.push(Number(array[i]));
-  }
-  return calorie;
+  try {
+    var calorie = [];
+      for(var i = 3; i < array.length; i += 4) { 
+        array[i].trim();
+        array[i].length >= 1;
+        array[i].replace(/\s+/, "")
+        calorie.push(Number(array[i]));
+      }
+      return calorie;
+    } catch {
+      console.log("One or more of the calorie inputs are invalid.");
+    }
 }
 
 function getPrice(array) {
-  var price = [];
-  var test;
-  for(var i = 1; i < array.length; i += 4) { 
-    test = array[i].replace("$", '');
-    price.push(Number(test));
-  }
-  return price;
+  try {
+    var price = [];
+      var test;
+      for(var i = 1; i < array.length; i += 4) { 
+        array[i].trim();
+        array[i].length >= 1;
+        array[i].replace(/\s+/, "")
+        test = array[i].replace("$", '');
+        price.push(Number(test));
+      }
+      return price;
+    } catch {
+      console.log("One or more of the price inputs are invalid.");
+    }
 }
 
 function displayMenuStats(name, calorie, price) {
@@ -117,11 +154,17 @@ function promptItem(name) {
     console.log(addition + ") " +name [i])
     }
     var number = prompt('\n' + "What item would you like to get the description, calories, and price for? Please use numbers to represent item");
-    return number;
+    if (isNaN(number) == false && number > name.length && number <= 0) {
+      return number;
+    } else {
+      console.log("Please input a valid value.");
+      // FIND A WAY TO RETURN TO THE PROMPT WITHOUT INVALIDATING THE INPUT
+    }
 }
 
 function displayItem(name, description, calorie, price, number) {
-    console.log("Name - " + name[number -1]);
+    console.log(number)
+    console.log('\n' + "Name - " + name[number -1]);
     console.log("Description - " + description[number - 1]);
     console.log("Calories - " + calorie[number - 1]);
     console.log("Price - $" + price[number - 1]);    
