@@ -14,8 +14,8 @@
 //Friday : Can not get a way to convert the XML string into readable xml for JavaScript...
 //Saturday : Managed to get values of data I need but have a lot of whitespace elements in array. Will remove white space tonight.
 //Sunday : Got all data into seperate arrays, and can display results needed. Only thing left is Sunday's objective of validating data.
-//Monday : Checks if webpage is up, Catches errors, corrects for bad spelling/duplicate spaces/whitespace. Need to loop number input and make a way to exit program when done item input, also validate name, descp
-// caloire, and price all have same array amounts. 
+//Monday : Checks if webpage is up, Catches errors, corrects for bad spelling/duplicate spaces/whitespace.  Make a way to loop program and exit program when done with item input. Also validate name, descp
+// caloire, and price all have same array amounts of arrays. 
 
 
 //Refrences
@@ -153,12 +153,16 @@ function promptItem(name) {
     var addition = (i+1);
     console.log(addition + ") " +name [i])
     }
-    var number = prompt('\n' + "What item would you like to get the description, calories, and price for? Please use numbers to represent item");
-    if (isNaN(number) == false && number > name.length && number <= 0) {
-      return number;
+    
+    var valid = true;
+    while (valid) {
+           number = prompt('\n' + "What item would you like to get the description, calories, and price for? Please use numbers to represent item");
+    if (isNaN(number) == false && number > 0 && number <= name.length) {
+        return number;
+        valid = false;
     } else {
-      console.log("Please input a valid value.");
-      // FIND A WAY TO RETURN TO THE PROMPT WITHOUT INVALIDATING THE INPUT
+      console.log("Please input a valid value");
+    }
     }
 }
 
