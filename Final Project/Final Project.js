@@ -14,8 +14,8 @@
 //Friday : Can not get a way to convert the XML string into readable xml for JavaScript...
 //Saturday : Managed to get values of data I need but have a lot of whitespace elements in array. Will remove white space tonight.
 //Sunday : Got all data into seperate arrays, and can display results needed. Only thing left is Sunday's objective of validating data.
-//Monday : Checks if webpage is up, Catches errors, corrects for bad spelling/duplicate spaces/whitespace.  Make a way to loop program and exit program when done with item input. Also validate name, descp
-// caloire, and price all have same array amounts of arrays. 
+//Monday : Checks if webpage is up, Catches errors, corrects for bad spelling/duplicate spaces/whitespace.  Made a way to loop program and exit program when done with item input. 
+//Also validate name, descption, caloire, and price all have same array amounts of arrays. 
 
 
 //Refrences
@@ -37,9 +37,13 @@ function main() {
     let calorie =  getCalorie(array)
     let price =  getPrice(array)
 
+
     displayMenuStats(name, calorie, price);
-    let number = promptItem(name);
-    displayItem(name, description, calorie, price, number);
+    do {
+      let number = promptItem(name);
+     displayItem(name, description, calorie, price, number);
+      repeat = doRepeat();
+    } while (repeat =="Y" || repeat == "y")
 }
 
 
@@ -167,7 +171,6 @@ function promptItem(name) {
 }
 
 function displayItem(name, description, calorie, price, number) {
-    console.log(number)
     console.log('\n' + "Name - " + name[number -1]);
     console.log("Description - " + description[number - 1]);
     console.log("Calories - " + calorie[number - 1]);
@@ -181,4 +184,9 @@ function displayItem(name, description, calorie, price, number) {
       //console.log("Calories - " + calorie[i])
       //console.log("Price - $" + price[i])
     //}
+}
+
+function doRepeat() {
+  repeat = prompt("\nIf you would like to get values for another item, input 'Y', otherwise input anything else to exit program.");
+  return repeat;
 }
