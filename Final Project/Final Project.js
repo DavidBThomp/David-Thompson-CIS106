@@ -1,3 +1,4 @@
+//Takes values from webpage and converts into arrays for names, descriptions, calories, and price. Also displays average cost, calories, and amount of items on menu.
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 main();
