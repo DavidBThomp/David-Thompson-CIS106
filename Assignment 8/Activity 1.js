@@ -1,3 +1,4 @@
+
  // Asks user for value and number of expressions to display.
 
  main();
@@ -14,7 +15,7 @@ function instructions() {
 }
 
 function getValue() {
-    value = prompt("Please input a value (number).");
+    value = prompt("Please input a value.");
     return value;
 }
 
@@ -26,9 +27,7 @@ function getExpressions() {
 function doMultiplication(value, expressions) {
     let multiplication = value * expressions;
     var countdown
-    console.log(value + " * " + expressions + " = " + multiplication);
-    while (expressions > 1) {
-        expressions = expressions - 1;
+    for (countdown > 0; expressions>=1; expressions--) {
         countdown = value * expressions;
         console.log(value + " * " + expressions + " = " + countdown);
     }
