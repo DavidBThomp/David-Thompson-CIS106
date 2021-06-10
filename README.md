@@ -31,7 +31,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This class (Computer Information Systems 106) served as a starting point for some of the fundemental concepts of programming. The concepts being presented are tested using a graphical flowchart program called Flowgorithm and then extended using JavaScript. This project had to option of choosing other langauges, but learning JavaScript inside-out was my objective at the time.
+This class (Computer Information Systems 106) served as a starting point for some of the fundemental concepts of programming. The concepts being presented are tested using a graphical flowchart program called Flowgorithm and then extended using JavaScript. This project had to option of choosing other langauges, but learning JavaScript inside-out was my objective at the time. Dave Braunschweig is the teacher and had access to edit files, changes can be seen in the commits, but for the most part all the code and assignments are fully completed by the students (me).
 
 ### Built With
 
