@@ -61,14 +61,7 @@ Using arrays and strings together to try to read a file type that is externally 
 
 This assignment brings forth most of the stuff that we learned to make the best program that we can. I mostly learned about JavaScript and the limitations of the little I learned, but I also understood that the little I did know as applicable to make a working program. I have learned so many things about programming over this course, but the things that stick out the most are parameters, arguments, and string. Before this course, I had dabbled into a few languages, but with the projects and readings, I feel like I can put together almost any language that you throw at me on a surface level. One large thing that isn't within the course but is part of it is navigating git-hub. Now that I have this knowledge I can navigate the site and understand what I do. I also learned the value of having reliable resources to ask questions to, I never really used teachers or TA's/SA's before this course. Overall, I have to say this course has taught me soo much about coding in an enjoyable way. It has shown me that classes can not only be challenging, but fun! 
 
-<!-- PROJECT LOGO -->
-<br />
-<p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">Computer Information Systems 106 (Harper College)</h3>
+<h3 align="center">Computer Information Systems 106 / Computer Logic and Programming Technology(Harper College)</h3>
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -101,33 +94,19 @@ This assignment brings forth most of the stuff that we learned to make the best 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
-
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+This class (Computer Information Systems 106) served as a starting point for some of the fundemental concepts of programming. The concepts being presented are tested using a graphical flowchart program called Flowgorithm and then extended using JavaScript. This project had to option of choosing other langauges, but learning JavaScript inside-out was my objective at the time.
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
+* [Flowgorithm](http://www.flowgorithm.org/)
+* [JavaScript]
 
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+The software needed to run the programs and instructions to run the program.
 
 ### Prerequisites
 
