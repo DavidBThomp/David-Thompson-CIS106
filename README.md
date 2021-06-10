@@ -63,7 +63,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 ## Assignment Analysis
 
-The rest of this serves as a historical tracker of my thought before, during, and after each project. Thank you for visiting and I hope you will be able to see my progress as my work continues!
+The rest of this serves as a historical tracker of my thought before, during, and after each project. These were addressed towards the teacher but also as a reflection for my self. Thank you for visiting and I hope you will be able to see my progress as my work continues!
 
 ### Assignment 1
 
